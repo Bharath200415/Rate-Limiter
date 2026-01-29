@@ -1,4 +1,4 @@
-# Rate Limiter using Redis (Node.js + Express)
+# 🚦Rate Limiter using Redis (Node.js + Express)
 
 A simple and scalable **rate-limiting middleware** implemented using **Node.js, Express, and Redis**.  
 This project demonstrates how Redis can be used to efficiently control the number of requests from a client within a fixed time window.
@@ -61,8 +61,8 @@ Redis is used because it is:
 | Strategy | Fixed Window Counter |
 
 ---
-
-## 🔑 Environment Variables
+## Getting Started 
+### 🔑 Environment Variables
 
 Create a `.env` file in the project root:
 

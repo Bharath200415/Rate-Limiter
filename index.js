@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const ip = require("ip");
-const redis = require('./helpers/redis');
+const redis = require('./helper/redis');
 
 const MAX_Allowed = 3;
 const MAX_Time = 20000; //20s 

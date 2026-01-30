@@ -2,7 +2,7 @@ const express = require("express");
 const ip = require("ip");
 
 const MAX_Allowed = 5;
-const MAX_Time = 20000; //30s 
+const MAX_Time = 20000; //20s 
 
 let ip_mapping = {};
 

@@ -56,14 +56,43 @@ Redis is used because it is:
 | Rule | Value |
 |----|------|
 | Max Requests | 5 |
-| Time Window | 30 seconds |
+| Time Window | 20 seconds |
 | Storage | Redis |
 | Strategy | Fixed Window Counter |
 
 ---
-## Getting Started 
+## Follow the steps below to set up and run the project locally.
+
+#### 1️⃣ Initialize the Node.js project
+
+If you are starting from scratch, initialize a Node.js project:
+
+```bash
+npm init -y
+```
+### 2️⃣ Install required dependencies
+
+Install Express (server framework):
+
+```bash
+npm install express
+```
+Install ip and ioredis 
+
+```bash
+npm install ip ioredis
+```
+### 3️⃣ Install development dependency (Nodemon)
+
+Nodemon automatically restarts the server on file changes:
+
+```bash
+npm install -g nodemon
+```
+
 ### 🔑 Environment Variables
 
+---
 Create a `.env` file in the project root:
 
 ```env
@@ -74,4 +103,39 @@ REDIS_PORT=your_redis_port
 REDIS_USERNAME=default
 REDIS_PASSWORD=your_redis_password
 
+```
+### Run the application locally
+For development: 
+```bash
+npm run dev
+```
+```bash 
+npm start
+```
+Server will start at
+```bash
+http://localhost:3000
+```
 
+## 🧪 Testing the Rate Limiter
+### Send multiple requests to the server:
+Use postman to send *get* requests to the server or 
+```bash 
+curl http://localhost:3000
+```
+After exceeding the allowed limit, the server responds with:
+```bash
+HTTP/1.1 429 Too Many Requests
+```
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome.  
+Feel free to fork the repository and submit a pull request.
+
+---
+
+## ⭐ Support
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+---
